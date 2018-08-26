@@ -1,0 +1,15 @@
+<% include partials/header %>
+
+<h1><%= view.name %></h1>
+
+<img src="<%= view.image %>">
+
+<p> <%= view.description %></p>
+
+<% view.comments.forEach(function(comment){ %>
+    <p>
+        <strong><%= comment.author %></strong> - <%= comment.text %>
+    </p>
+<% }); %>
+
+<% include partials/footer %>
